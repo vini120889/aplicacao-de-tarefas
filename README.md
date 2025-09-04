@@ -83,7 +83,7 @@ todo-list/
 1. **Clone o repositório:**
 
 git clone: https://github.com/vini120889/aplicacao-de-tarefas
-cd todo-list
+
 
 2. **Instale as dependências:**
 
