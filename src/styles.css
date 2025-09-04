@@ -1,0 +1,221 @@
+/* Reset básico */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f0f2f5;
+  color: #333;
+}
+
+/* Container principal */
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Header */
+header {
+  background: #007bff;
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+header nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+}
+
+header nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+header nav a.active {
+  background: #fff;
+  color: #007bff;
+  font-weight: 700;
+}
+
+/* Títulos */
+h2 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+/* Lista de tarefas */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #f9f9f9;
+  margin: 10px 0;
+  padding: 15px 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+li:hover {
+  transform: translateY(-2px);
+}
+
+/* Botões */
+button {
+  margin-left: 5px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+button:first-of-type {
+  background: #28a745;
+  color: #fff;
+}
+
+button:first-of-type:hover {
+  background: #218838;
+}
+
+button:last-of-type {
+  background: #dc3545;
+  color: #fff;
+}
+
+button:last-of-type:hover {
+  background: #c82333;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="text"] {
+  width: 90%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button[type="submit"] {
+  width: 50%;
+  background: #007bff;
+  color: #fff;
+  font-size: 16px;
+}
+
+button[type="submit"]:hover {
+  background: #0069d9;
+}
+
+/* Toolbar com busca, filtro e botão */
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  padding: 15px 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Inputs e select dentro da toolbar */
+.toolbar .input {
+  flex: 1;
+  min-width: 150px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border 0.3s;
+}
+
+.toolbar .input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Botão "+ Nova tarefa" */
+.toolbar .btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+/* Botão primário */
+.toolbar .btn.primary {
+  background: #28a745;
+  color: #fff;
+}
+
+.toolbar .btn.primary:hover {
+  background: #218838;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 500px) {
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .toolbar .btn {
+    width: 100%;
+  }
+}
+
+li.completed span {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* Ajustes para o checkbox e layout */
+.task-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.task-right {
+  display: flex;
+  gap: 5px;
+}
